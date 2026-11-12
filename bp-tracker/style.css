@@ -1,12 +1,4 @@
-/* Hallmark · shape: Narrative Workflow (the monitor and the phone, the trend, the doctor, the close) · genre: modern-minimal · theme: Dose (deal: manual, scripts not run in this session) · dose: white · job: try, the App Store badge under the head and again at the close
- * hero: Stage, head on five columns, the visual on seven: a drawn generic monitor showing 118, 73 and 60 beside an iPhone showing the same reading saved in the app · nav: edge-aligned, the wordmark and two links, no button · history: its own split, the phone on the left · close: the App Store on its own, centred under the icon · footer: a mast, the wordmark over three links, the medical line beneath
- * signature: the monitor's seven-segment reading and the same numbers on the phone, on the first screen · imagery: screenshots 7 (xcrun simctl, demo mode) in CSS phone frames; one drawn monitor (img/monitor.svg) by request; no photographs, no library · radius: 14px surfaces, 10px keys, phones at 19% of their width
- * paper: oklch(97.6% 0.011 88) with a fibre grain · accent: oklch(50% 0.13 160), on links, focus, the checked key and the stamp · display: Schibsted Grotesk 700 · body: Instrument Sans 400/500 · outlier: DM Mono on times
- * axes: light/grotesk/warm · posture: committed (plastic tints and the ink band carry the colour) · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, a phone beside a head is the common app hero; tied it to the product by giving the drawn monitor the exact reading the phone shows */
-/* Hallmark · waive 47b · every screen sits in one CSS iPhone frame, real captures inside · the user asked for the app shown on a phone */
-/* Hallmark · waive 80 · one drawn monitor in the hero, named in its alt · the user asked for a generic monitor in place of photographs of real ones */
-/* Hallmark · dismissed 23 · the plastic trays are declared surfaces under the committed posture; the green itself stays on the key, the links and the stamp */
+/* BP Tracker promo page: layout and components. Colours, type and spacing live in tokens.css. */
 
 /* base */
 *, *::before, *::after { box-sizing: border-box; }
@@ -96,7 +88,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus); o
 .split--flip { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); }
 .split--flip .split__visual { order: -1; justify-self: center; }
 
-/* plastic: the Dose surface */
+/* plastic: the tinted tray surface */
 .plastic { position: relative; border-radius: var(--radius-card);
   background: linear-gradient(color-mix(in oklab, var(--glint) 32%, transparent), transparent 18%), color-mix(in oklab, var(--t) 62%, transparent);
   box-shadow: inset 0 1.5px 0 var(--glint), inset 0 -24px 36px -28px color-mix(in oklab, var(--t) 45%, var(--color-ink)); }
