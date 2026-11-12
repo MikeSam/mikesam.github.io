@@ -9,7 +9,8 @@
   /* paper and ink */
   --color-paper: oklch(97.6% 0.011 88);
   --color-paper-2: oklch(96.5% 0.02 160);
-
+  --color-sage: oklch(94.6% 0.022 150);
+  --color-sand: oklch(94% 0.022 80);
   --color-ink: oklch(21% 0.025 170);
   --color-ink-2: oklch(31% 0.02 170);
   --color-muted: oklch(49% 0.024 165);

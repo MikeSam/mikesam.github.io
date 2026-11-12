@@ -8,7 +8,6 @@ body {
   margin: 0; overflow-x: clip; min-width: 320px;
   font: 400 var(--text-md)/1.55 var(--font-body); color: var(--color-ink);
   background-color: var(--color-paper);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.33 0 0 0 0 0.25 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
   font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;
   caret-color: var(--color-accent);
   scrollbar-color: var(--color-rule-2) var(--color-paper);
@@ -79,6 +78,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus); o
 
 /* sections */
 .section { padding-block: var(--section-gap); }
+.tone-sage { background-color: var(--color-sage); }
+.tone-sand { background-color: var(--color-sand); }
 .split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); align-items: center; }
 .split__text { display: grid; gap: var(--space-lg); align-content: center; }
 .facts { display: grid; gap: var(--space-md); margin: var(--space-md) 0 0; padding: 0; }
