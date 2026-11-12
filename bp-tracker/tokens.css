@@ -1,0 +1,97 @@
+/* BP Tracker promo page: tokens. Warm paper, translucent plastic trays, one green accent. */
+
+@font-face { font-family: "Schibsted Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/schibsted-grotesk-700.woff2") format("woff2"); }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 500; font-display: swap; src: url("fonts/instrument-sans-var.woff2") format("woff2"); }
+@font-face { font-family: "DM Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/dm-mono-400.woff2") format("woff2"); }
+@font-face { font-family: "DM Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/dm-mono-500.woff2") format("woff2"); }
+
+:root {
+  /* paper and ink */
+  --color-paper: oklch(97.6% 0.011 88);
+  --color-paper-2: oklch(96.5% 0.02 160);
+
+  --color-ink: oklch(21% 0.025 170);
+  --color-ink-2: oklch(31% 0.02 170);
+  --color-muted: oklch(49% 0.024 165);
+  --color-rule: oklch(86.5% 0.022 140);
+  --color-rule-2: oklch(80% 0.03 150);
+
+  /* the one green */
+  --color-accent: oklch(50% 0.13 160);
+
+  --color-accent-soft: oklch(88% 0.08 160);
+
+  --color-focus: oklch(45% 0.14 160);
+
+  /* ink band */
+  --color-band-paper: oklch(96% 0.01 160);
+
+  --color-band-mint: oklch(86% 0.09 160);
+
+  /* plastic tints: surfaces, never signals */
+
+  --p-wed: oklch(91.5% 0.064 98);
+  --p-thu: oklch(86.5% 0.075 160);
+  --p-fri: oklch(87% 0.048 210);
+
+  --light: oklch(99.4% 0.016 84);
+  --glint: oklch(100% 0 0);
+
+  /* the phone frame */
+  --phone-body: oklch(22% 0.006 260);
+  --phone-body-2: oklch(38% 0.008 260);
+  --phone-body-3: oklch(14% 0.006 260);
+  --phone-rim: oklch(58% 0.01 260);
+
+  --shadow-phone: 0 2px 4px oklch(20% 0.02 170 / 0.12), 0 36px 60px -24px oklch(25% 0.04 170 / 0.45);
+  --phone-hero: clamp(220px, 19vw, 290px);
+  --phone-tray: clamp(220px, 20vw, 280px);
+  --phone-tile: clamp(240px, 22vw, 320px);
+  --phone-tile-s: clamp(220px, 19vw, 270px);
+  --phone-close: clamp(220px, 19vw, 280px);
+
+  /* type */
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-body: "Instrument Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-outlier: "DM Mono", "SF Mono", Menlo, Consolas, ui-monospace, monospace;
+  --tracking-display: -0.03em;
+  --display-weight: 700;
+
+  --text-display: clamp(2.5rem, 1.6rem + 3.9vw, 5.25rem);
+  --text-display-s: clamp(2rem, 1.4rem + 2.6vw, 3.75rem);
+  --text-section: clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
+  --text-title: clamp(1.375rem, 1.2rem + 0.6vw, 1.5625rem);
+  --text-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.3125rem);
+  --text-md: 1.0625rem;
+  --text-sm: 0.9375rem;
+  --text-xs: 0.875rem;
+
+  /* space */
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px;
+  --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px;
+  --section-gap-s: clamp(72px, 5vw + 40px, 120px);
+  --section-gap: clamp(88px, 6vw + 48px, 144px);
+  --section-gap-l: clamp(104px, 7vw + 56px, 176px);
+
+  /* canvas */
+  --container: 1440px;
+  --gutter: clamp(16px, 4.5vw, 64px);
+  --gap-columns: 32px;
+  --nav-height: 72px;
+
+  /* shape */
+  --radius-card: 14px;
+  --radius-input: 10px;
+
+  --rule-hair: 1px;
+
+
+  /* motion */
+  --dur-micro: 120ms; --dur-short: 220ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* layers */
+ --z-raised: 10; --z-toast: 500;
+}
