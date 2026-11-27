@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <!-- The same diagonal glow as the page: brightest in the top-right corner. -->
+    <linearGradient id="tile" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17404a"/>
+      <stop offset="0.6" stop-color="#0b1220"/>
+    </linearGradient>
+    <!-- The same run of colour as the name: white into teal into sky blue. -->
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f1f5f9"/>
+      <stop offset="0.55" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#tile)"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="none" stroke="#5eead4" stroke-opacity="0.35"/>
+  <path d="M8 23V9.5l8 9 8-9V23" fill="none" stroke="url(#ink)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

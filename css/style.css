@@ -1,0 +1,366 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/space-grotesk.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/inter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Downloaded only when the page shows Russian text. */
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/inter-cyrillic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Every colour is a light/dark pair; color-scheme decides which one applies. */
+:root {
+  color-scheme: light dark;
+
+  --bg: light-dark(#f8fafc, #0b1220);
+  --text: light-dark(#334155, #a9b4c6);
+  --heading: light-dark(#0f172a, #f1f5f9);
+  --muted: light-dark(#526077, #8a97ab);
+  --accent: light-dark(#0f766e, #5eead4);
+  --accent-end: light-dark(#1d4ed8, #7dd3fc);
+
+  /* Angular's own electric violet and bright blue, lightened for dark mode the way angular.dev does. */
+  --angular-violet: light-dark(oklch(53.18% 0.28 296.97), color-mix(in srgb, oklch(53.18% 0.28 296.97), white 70%));
+  --angular-blue: light-dark(oklch(51.01% 0.274 263.83), color-mix(in srgb, oklch(51.01% 0.274 263.83), white 60%));
+  --glow: light-dark(rgb(15 118 110 / 10%), rgb(94 234 212 / 9%));
+  --line: light-dark(#dbe3ec, #1e293b);
+
+  /* Space Grotesk has no Cyrillic, so Russian headings fall through to Inter. */
+  --font-display: "Space Grotesk", Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* One glow, falling diagonally from the top-right corner. */
+html {
+  min-height: 100%;
+  background: linear-gradient(215deg, var(--glow), transparent 55%) fixed, var(--bg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font: 1rem/1.65 var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--heading);
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+/* The name is painted with a gradient that runs from the heading colour into the accent. */
+h1 {
+  width: fit-content;
+  background: linear-gradient(100deg, var(--heading) 10%, var(--accent) 65%, var(--accent-end));
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2.5rem, 6vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--heading);
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* The word "Angular" wears the gradient angular.dev gives its linked inline code. */
+.angular {
+  background: linear-gradient(90deg, var(--angular-violet), var(--angular-blue));
+  background-clip: text;
+  color: transparent;
+}
+
+/* Layout */
+
+.page {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 3rem 1.5rem;
+}
+
+section {
+  margin-bottom: 5rem;
+  scroll-margin-top: 6rem;
+}
+
+@media (min-width: 64rem) {
+  .page {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: 4rem;
+    padding-block: 0;
+  }
+
+  .intro {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100dvh;
+    padding-block: 6rem;
+  }
+
+  main {
+    padding-block: 6rem;
+  }}
+
+/* Intro */
+
+.intro {
+  margin-bottom: 4rem;
+}
+
+.title {
+  margin: 0.75rem 0 1rem;
+  color: var(--heading);
+  font: 500 1.25rem/1.3 var(--font-display);
+}
+
+.pitch {
+  max-width: 22rem;
+}
+
+.nav {
+  display: none;
+  margin-top: 4rem;
+}
+
+@media (min-width: 64rem) {
+  .nav {
+    display: block;
+  }
+}
+
+/* A vertical rail; the section in view lights its segment. */
+.nav a {
+  display: block;
+  padding: 0.625rem 1.25rem;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+  font: 600 0.8125rem/1 var(--font-display);
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav a:hover,
+.nav a[aria-current] {
+  color: var(--accent);
+}
+
+.nav a[aria-current] {
+  border-left-color: currentcolor;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+  font: 0.8125rem/1.6 var(--font-mono);
+}
+
+/* Theme switcher: pinned to the top-right corner, showing a sun or a moon */
+
+.theme-toggle {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+@media (min-width: 64rem) {
+  .theme-toggle {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Hidden until the script is ready; without it the page follows the system. */
+.theme-toggle[hidden],
+.theme-toggle[data-next="light"] .icon-moon,
+.theme-toggle[data-next="dark"] .icon-sun {
+  display: none;
+}
+
+.theme-toggle svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Entries: one job or one project */
+
+.entry {
+  margin-bottom: 2.5rem;
+}
+
+.entry-dates {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font: 0.8125rem/1.6 var(--font-mono);
+}
+
+.entry h3 {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+  .entry {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1.5rem;
+  }
+
+  /* An entry without dates has no use for the dates column, so it takes the full width. */
+  .entry > div:only-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.products {
+  margin: 0 0 1.25rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--line);
+}
+
+.products dt {
+  font-weight: 600;
+}
+
+.products dd {
+  margin: 0 0 0.75rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tags li {
+  padding: 0.125rem 0.625rem;
+  border-radius: 999px;
+  background: var(--glow);
+  color: var(--accent);
+  font: 0.75rem/1.6 var(--font-mono);
+}
+
+.more {
+  margin-right: 1.5rem;
+  font-weight: 600;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* The language names switch the page; they look like every other link. */
+.lang-switch {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--heading);
+  font: inherit;
+  text-decoration: underline var(--accent);
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.lang-switch:hover {
+  color: var(--accent);
+}

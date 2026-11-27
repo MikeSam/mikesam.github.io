@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="title">Mikhail Samarin · Lead Software Engineer</title>
+    <meta name="description" content="Mikhail Samarin is a lead software engineer with more than ten years of Angular, building industrial IoT applications from the customer's problem to the release.">
+    <meta property="og:title" content="Mikhail Samarin · Lead Software Engineer">
+    <meta property="og:description" content="Product-minded engineer with more than ten years of Angular.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikesam.github.io/">
+    <link rel="canonical" href="https://mikesam.github.io/">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/site.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/console.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="intro">
+        <div>
+          <h1 data-i18n="name">Mikhail Samarin</h1>
+          <p class="title"><span data-i18n="role">Lead Software Engineer</span> · Angular</p>
+          <p class="pitch" data-i18n="pitch">Product-minded engineer: I start from the customer's problem, then build the application that solves it.</p>
+          <ul class="contacts" aria-label="Contact" data-i18n-label="contact">
+            <li><a href="docs/Mikhail-Samarin-CV.pdf" download data-i18n="cv">Download CV</a></li>
+            <li><a href="https://www.linkedin.com/in/mike-samarin-16439219b/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/MikeSam" target="_blank">GitHub</a></li>
+            <li><a href="mailto:msamarin@gmail.com">msamarin@gmail.com</a></li>
+          </ul>
+          <nav class="nav" aria-label="Sections" data-i18n-label="sections">
+            <ul>
+              <li><a href="#about" data-i18n="about">About</a></li>
+              <li><a href="#experience" data-i18n="experience">Experience</a></li>
+              <li><a href="#projects" data-i18n="projects">Projects</a></li>
+              <li><a href="#education" data-i18n="education">Education</a></li>
+              <li><a href="#hobbies" data-i18n="hobbies">Hobbies</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" hidden>
+          <svg class="icon-sun" viewBox="0 0 24 24" role="img" aria-label="Switch to light theme" data-i18n-label="toLight">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" role="img" aria-label="Switch to dark theme" data-i18n-label="toDark">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
+          </svg>
+        </button>
+      </header>
+
+      <main>
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading" data-i18n="about">About</h2>
+          <p data-i18n="about1">I'm a lead software engineer with more than ten years of <span class="angular">Angular</span> behind me, going back to AngularJS. I work in industrial IoT, where the application is how engineers run fleets of edge devices on the factory floor, so clarity and reliability are very important.</p>
+          <p data-i18n="about2">I own product areas end to end: framing the customer problem, writing the PRD or ADR, agreeing the API contract with backend engineers, splitting the work into tickets, building the application, packaging the release and standing up the environment to test it. The part I enjoy most is turning a vague customer need into a design the whole team can execute, and then building it.</p>
+          <p data-i18n="about3">My depth is in frontend, and I'm at home across the rest of the stack and in system design. I work with AI coding agents every day: I break the work down, set the constraints and review every change, so they speed me up without lowering the bar. Outside work I build products of my own, most recently an iOS app on the App Store.</p>
+          <ul class="tags" aria-label="Skills" data-i18n-label="skills">
+            <li>Angular</li>
+            <li>AngularJS</li>
+            <li>TypeScript</li>
+            <li>RxJS</li>
+            <li>HTML/CSS</li>
+            <li>React</li>
+            <li>API design</li>
+            <li>System design</li>
+            <li>Docker</li>
+            <li>Testing</li>
+            <li>CI/CD</li>
+            <li>Agentic coding</li>
+          </ul>
+          <p class="note" data-i18n="languages">Languages: <button class="lang-switch" type="button" data-lang="en" aria-current="true">English</button>, <button class="lang-switch" type="button" data-lang="ru">Russian</button>.</p>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading" data-i18n="experience">Experience</h2>
+          <article class="entry">
+            <p class="entry-dates">2016 — 2026</p>
+            <div>
+              <h3><span data-i18n="role">Lead Software Engineer</span> · <a href="https://litmus.io/" target="_blank">Litmus Automation</a></h3>
+              <p data-i18n="litmus">Industrial edge software. I owned product areas from the customer problem to the release, and was responsible for the user and admin front ends of Litmus Edge Manager.</p>
+              <dl class="products">
+                <dt><a href="https://docs.litmus.io/edgemanager" target="_blank">Litmus Edge Manager</a></dt>
+                <dd data-i18n="lem">The platform that provisions, configures and monitors fleets of industrial edge devices. I built its user and admin applications.</dd>
+                <dt><a href="https://docs.litmus.io/unify" target="_blank">Litmus Unify</a></dt>
+                <dd data-i18n="unify">An MQTT data hub for a company-wide Unified Namespace. I built the web application used to run and monitor it.</dd>
+                <dt><a href="https://docs.cloud.google.com/manufacturing-data-engine/docs/concepts/manufacturing-connect" target="_blank">Manufacturing Connect</a></dt>
+                <dd data-i18n="mc">Factory connectivity for Google Cloud's Manufacturing Data Engine (MDE), designed by Litmus. I built the web application used to manage MDE settings and the edge instances that feed it.</dd>
+              </dl>
+              <ul class="tags" aria-label="Technologies" data-i18n-label="technologies">
+                <li>Angular</li>
+                <li>AngularJS</li>
+                <li>TypeScript</li>
+                <li>RxJS</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading" data-i18n="projects">Projects</h2>
+          <article class="entry">
+            <p class="entry-dates">2026</p>
+            <div>
+              <h3><a href="https://apps.apple.com/app/id6826781390" target="_blank">BP Tracker</a></h3>
+              <p data-i18n="bp">An iOS app that logs blood pressure from a photo of a home monitor. It reads the digits off the display, saves each reading to Apple Health and shows charts, reminders and a PDF report.</p>
+              <p><a class="more" href="https://apps.apple.com/app/id6826781390" target="_blank">App Store</a> <a class="more" href="https://github.com/MikeSam/bp-tracker" target="_blank" data-i18n="source">Source on GitHub</a></p>
+              <ul class="tags" aria-label="Technologies" data-i18n-label="technologies">
+                <li>Swift</li>
+                <li>Vision</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="education" aria-labelledby="education-heading">
+          <h2 id="education-heading" data-i18n="education">Education</h2>
+          <article class="entry">
+            <p class="entry-dates">1998 — 2003</p>
+            <div>
+              <h3 data-i18n="university">Magnitogorsk State Technical University</h3>
+              <p data-i18n="degree">Industrial Electronics Engineer</p>
+            </div>
+          </article>
+          <article class="entry">
+            <div>
+              <h3 data-i18n="courses">Courses</h3>
+              <dl class="products">
+                <dt><a href="https://ultimatecourses.com/" target="_blank">Ultimate Courses</a></dt>
+                <dd>Angular Pro, RxJS, TypeScript</dd>
+                <dt><a href="https://www.udemy.com/course/complete-react-developer-zero-to-mastery/" target="_blank">Complete React Developer (Zero to Mastery)</a></dt>
+                <dd>React, Udemy</dd>
+              </dl>
+            </div>
+          </article>
+        </section>
+
+        <section id="hobbies" aria-labelledby="hobbies-heading">
+          <h2 id="hobbies-heading" data-i18n="hobbies">Hobbies</h2>
+          <p data-i18n="hobbyList">Travelling, hiking, sports (hockey, soccer, basketball), books and coding.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
